@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+<article>
+  <div class="archive-entry-wrapper">
+    <div class="archive-info">
+      <div class="date">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </div>
+
+      <div class="date">
+        {{ post.category }}
+      </div>
+    </div>
+
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </div>
+</article>
+{% endfor %}

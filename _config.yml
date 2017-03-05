@@ -1,0 +1,14 @@
+title: Sahithyen's Blog
+email: sahithyen@me.com
+description: Sahithyen's personal blog
+baseurl: ""
+url: ""
+footerText: © by Sahithyen
+permalink: /:month/:year/:title/
+
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock

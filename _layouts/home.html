@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+<article>
+  <div class="content-title">
+    <h1>{{ post.title }}</h1>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="content-info">
+      <div class="date">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </div>
+      <div class="category">
+        {{ post.categories }}
+      </div>
+    </div>
+
+    <div class="content">
+      {{ post.excerpt }}
+    </div>
+
+    <a href="{{ post.url }}">Weiterlesen...</a>
+  </div>
+
+  <hr>
+</article>
+{% endfor %}
