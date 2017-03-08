@@ -1,9 +1,7 @@
 title: Sahithyen's Blog
 email: sahithyen@me.com
 description: Sahithyen's personal blog
-baseurl: ""
-url: ""
-footerText: © by Sahithyen
+url: "https://blog.sahithyen.com/"
 permalink: /:month/:year/:title/
 
 markdown: kramdown

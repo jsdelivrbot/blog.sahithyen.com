@@ -60,68 +60,6 @@ body {
     padding-bottom: 90px;
 }
 
-/* Loader */
-
-.ball-scale-multiple,
-.loader {
-    width: $loader-text-width;
-    height: $loader-animation-size + $loader-text-margin-top + ($font-size * $line-height);
-}
-
-.loader {
-    font-family: $active-font;
-    margin: $loader-margin-top auto $loader-margin-bottom;
-}
-
-.ball-scale-multiple {
-    position: relative;
-}
-
-.ball-scale-multiple > div.ball {
-    background-color: $loader-animation-color;
-    border-radius: 100%;
-    animation-fill-mode: both;
-    position: absolute;
-    top: 0;
-    left: ($loader-text-width / 2) - ($loader-animation-size / 2);
-    opacity: 0;
-    margin: 0;
-    width: $loader-animation-size;
-    height: $loader-animation-size;
-    animation: ball-scale-multiple 1s 0s linear infinite;
-}
-
-.ball-scale-multiple > div.ball:nth-child(2) {
-    animation-delay: -0.4s;
-}
-
-.ball-scale-multiple > div.ball:nth-child(3) {
-    animation-delay: -0.2s;
-}
-
-.ball-scale-multiple > div.text {
-    position: absolute;
-    top: $loader-animation-size + $loader-text-margin-top;
-    left: 0;
-    width: $loader-text-width;
-    text-align: center;
-}
-@keyframes ball-scale-multiple {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    5% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
-}
-
 /* Top bar */
 
 .top-bar {
@@ -197,6 +135,7 @@ body {
 .archive-info .category {
     font-weight: bold;
 }
+
 @media screen and (min-width: $content-info-left-min-size) {
     .archive-info {
         display: inline-block;
@@ -224,4 +163,14 @@ footer {
     margin: 0 $footer-bar-margin-sides;
     padding: $footer-bar-padding-top $footer-bar-padding-sides $footer-bar-padding-bottom;
     border-top: $footer-bar-border-size solid $footer-bar-border-color;
+}
+
+.footer-addon-text {
+    display: none;
+}
+
+@media screen and (min-width: $content-info-left-min-size) {
+    .footer-addon-text {
+        display: block;
+    }
 }
