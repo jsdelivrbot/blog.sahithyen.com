@@ -8,10 +8,16 @@ layout: default
     <h1>{{ post.title }}</h1>
   </div>
 
+  {% if post.hero_image %}
+  <div class="content-hero-image">
+    {% include image.html url=post.hero_image %}
+  </div>
+  {% endif %}
+
   <div class="content-wrapper">
     <div class="content-info">
       <div class="date">
-        {{ post.date | date: "%b %-d, %Y" }}
+        {{ post.german_date }}
       </div>
       <div class="category">
         {{ post.categories }}

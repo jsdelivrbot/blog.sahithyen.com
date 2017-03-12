@@ -5,11 +5,11 @@ $content-color: #333333;
 $seperator-color: #e1e1e1;
 
 // Font
-$font-size: 22px;
+$font-size: 20px;
 $line-height: 1.4;
-$body-font: "adobe-caslon-pro", serif;
-$heading-font: "myriad-pro", sans-serif;
-$active-font: "myriad-pro", sans-serif;
+$body-font: "adobe-caslon-pro";
+$heading-font: "myriad-pro";
+$active-font: "myriad-pro";
 $heading-sizes: ( h1: 3.125em, h2: 2.618em, h3: 1.931em, h4: 1.618em, h5: 1.194em, h6 : 1em );
 
 // Dimensions
@@ -18,15 +18,14 @@ $content-info-left-min-size: 1200px;
 
 // Top bar
 $top-bar-color: rgba(255, 255, 255, 0.9);
-$top-bar-padding-top: 20px;
-$top-bar-padding-bottom: 20px;
+$top-bar-padding-top: 15px;
+$top-bar-padding-bottom: 15px;
 $top-bar-padding-sides: 25px;
 $top-bar-border-color: $seperator-color;
 $top-bar-border-size: 1px;
 $top-bar-margin-sides: 10px;
 $top-bar-margin-bottom: 40px;
 $top-bar-item-margin: 20px;
-$search-input-border-size: 1px;
 
 // Content
 $content-info-margin: 25px;
@@ -34,9 +33,10 @@ $content-info-width: 200px;
 
 // Footer bar
 $footer-bar-color: white;
-$footer-bar-padding-top: 25px;
-$footer-bar-padding-bottom: 20px;
+$footer-bar-padding-top: 15px;
+$footer-bar-padding-bottom: 15px;
 $footer-bar-padding-sides: $top-bar-padding-sides;
 $footer-bar-border-color: $seperator-color;
 $footer-bar-border-size: 1px;
 $footer-bar-margin-sides: 10px;
+$footer-bar-item-margin: 20px;

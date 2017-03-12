@@ -1,7 +1,11 @@
 var config = {
     kitId: 'hvf7lmk',
     scriptTimeout: 3000,
-    async: false
+    async: true,
+    active: () => {
+      var dropcaps = document.querySelectorAll(".dropcap");
+      Dropcap.layout(dropcaps, 3);
+    }
   },
   h = document.documentElement,
   t = setTimeout(function() {
@@ -16,9 +20,7 @@ h.className += " wf-loading";
 tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
 tk.async = true;
 
-tk.onload = tk.onreadystatechange = function() {
-  re = this.readyState;
-
+tk.onload = tk.onreadystatechange = () => {
   if (f ||
     this.readyState &&
     this.readyState != "complete" &&
@@ -27,13 +29,10 @@ tk.onload = tk.onreadystatechange = function() {
   }
 
   f = true;
-  clearTimeout(t);
 
-  try {
-    Typekit.load(config);
-
-    Dropcap.layout(document.querySelectorAll(".dropcap"), 3);
-  } catch (e) {}
+  Typekit.load(config);
 };
 
-s.parentNode.insertBefore(tk, s);
+document.addEventListener("DOMContentLoaded", (event) => {
+  s.parentNode.insertBefore(tk, s);
+});

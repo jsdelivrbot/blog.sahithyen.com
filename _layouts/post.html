@@ -7,10 +7,16 @@ layout: default
     <h1>{{ page.title }}</h1>
   </div>
 
+  {% if page.hero_image %}
+  <div class="content-hero-image">
+    {% include image.html url=page.hero_image %}
+  </div>
+  {% endif %}
+
   <div class="content-wrapper">
     <div class="content-info">
       <div class="date">
-        {{ page.date | date: "%b %-d, %Y" }}
+        {{ page.german_date }}
       </div>
       <div class="category">
         {{ page.category }}
